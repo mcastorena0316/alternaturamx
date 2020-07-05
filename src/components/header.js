@@ -5,7 +5,7 @@ import "../css/font-awesome.css"
 import "bootstrap/dist/css/bootstrap.css"
 import "../css/style.css"
 import SEO from "../components/seo"
-import logo from "../images/oneshopper-logo.png"
+import logo from "../images/Alternatura.png"
 
 
 
@@ -15,10 +15,16 @@ const Header = ({ siteTitle }) => (
     </SEO>
     <div className="container">
       <div className="row">
-        <div className="col-sm-12 col-md-4 align-self-center">
+        <div className="col-sm-12 col-md-3 align-self-center">
           <Link className="header-logo" to="/"><img src={logo} alt="logo"></img></Link>
         </div>
-        <div className="col-sm-12 col-md-8 align-self-center">
+        <div className="col-sm-12 col-md-5 align-self-center search">
+          <input type="text" placeholder="Search" className="search-bar" />
+          <button type="button" className="searchButton">
+            <i className="fa fa-search" />
+          </button>
+        </div>
+        <div className="col-sm-12 col-md-4 align-self-center">
           <nav>
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
@@ -30,9 +36,9 @@ const Header = ({ siteTitle }) => (
               <li className="nav-item">
                 <Link className="nav-link" to="/store">Store</Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link" to="/contact-us">Contact</Link>
               </li>

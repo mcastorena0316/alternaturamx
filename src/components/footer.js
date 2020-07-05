@@ -15,14 +15,14 @@ class Footer extends Component {
                                         <li><Link to="/blogs">Blogs</Link></li>
                                         <li><Link to="/store">Store</Link></li>
                                         <li><Link to="/contact-us">Contact</Link></li>
-                                        <li><Link to="/copyright">Copyright</Link></li>
+                                        {/* <li><Link to="/copyright">Copyright</Link></li> */} 
                                     </ul>
                                 </div>
                             </section>
                         </div>
                         <div className="footer-bottom social-right-menu ">
                             <div className="site-info">
-                                ©2019 Oneshopper. All rights reserved.
+                                ©2020 Alternatura.
                             </div>
                         </div>
                     </div>
