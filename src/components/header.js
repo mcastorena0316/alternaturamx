@@ -15,16 +15,16 @@ const Header = ({ siteTitle }) => (
     </SEO>
     <div className="container">
       <div className="row">
-        <div className="col-sm-12 col-md-3 align-self-center">
+        <div className="col-sm-12 col-md-6 col-lg-3  align-self-center">
           <Link className="header-logo" to="/"><img src={logo} alt="logo"></img></Link>
         </div>
-        <div className="col-sm-12 col-md-5 align-self-center search">
+        <div className="col-sm-12 col-md-6 col-lg-5 align-self-center search">
           <input type="text" placeholder="Search" className="search-bar" />
           <button type="button" className="searchButton">
             <i className="fa fa-search" />
           </button>
         </div>
-        <div className="col-sm-12 col-md-4 align-self-center">
+        <div className="col-sm-12 col-md-12 col-lg-4 align-self-center">
           <nav>
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
