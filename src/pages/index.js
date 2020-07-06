@@ -68,6 +68,10 @@ const IndexPage = data => (
       <div className="text-center"><h2 className="with-underline">Latest Items</h2></div>
       <IndexPost data={data}></IndexPost>
     </div>
+    <div className="container">
+      <div className="text-center"><h2 className="with-underline">Recomendaciones para ti</h2></div>
+      <IndexPost data={data}></IndexPost>
+    </div>
     <Countdown data={data.data.contentfulDealCountDown} />
   </Layout>
 )

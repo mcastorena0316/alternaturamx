@@ -24,9 +24,9 @@ class SideBar extends React.Component {
         isOpen: !isOpen,
       });
       if (isOpen) {
-        document.body.setAttribute('style', 'overflow:scroll;');
+        document.getElementsByTagName("html")[0].setAttribute('style', 'overflow:scroll;');
       } else {
-        document.body.setAttribute('style', 'overflow:hidden;');
+        document.getElementsByTagName("html")[0].setAttribute('style', 'overflow:hidden;');
       }
     }
 
