@@ -372,6 +372,12 @@ a.header-logo img{margin:0;width:220px;}
 .site-About{padding:40px 0;}
 footer.site-footer ul{margin:0;}
 
+/* Mi perfil*/
+.mis-datos {padding-top: 20px}
+.card-body {display:flex; justify-content: space-between }
+.card-body p{margin-bottom:0}
+.mis-datos h4{margin-top:1.45rem}
+
 /* Media Css */
 @media (max-width:991px){
   header nav ul.navbar-nav{justify-content:center;}

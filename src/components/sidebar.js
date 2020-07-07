@@ -61,9 +61,9 @@ class SideBar extends React.Component {
             Signin
           </Link>
 
-          <Link to="/" className="menu-item">
-           Tu Cuenta
+          <Link to="/perfil" className="menu-item">Tu cuenta
           </Link>
+          
           <Link to="/" className="menu-item">  
             Consulta un especialista
           </Link>
