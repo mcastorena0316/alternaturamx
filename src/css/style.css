@@ -162,7 +162,7 @@ pre tt:after{content:""}
 /* header css */
 header.site-header{width:100%;background:#efede6;z-index:9;padding:20px 0;}
 ul.navbar-nav.mr-auto li{margin-bottom:0;}
-main{margin:0;}
+main{margin:0; margin-bottom: 30px;}
 .header-cart{width:80px;}
 .header-cart *{color: #726046;margin:0;}
 .header-cart a{text-decoration:none;display:flex;justify-content:center;flex-direction:row;text-align:center;margin-top:10px;}
@@ -244,14 +244,8 @@ header nav ul.navbar-nav li a{color: #726046;}
   border: none;
 }
 
-#button-clik:focus {
-  background: none;
-  border: none !important;
-}
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
+#button-clik:focus {background: none;border: none !important;}
+.bm-overlay {background: rgba(0, 0, 0, 0.3);}
 
 /* header css */
 footer.site-footer{background:#333;padding:0;text-align:center;}
@@ -374,9 +368,17 @@ footer.site-footer ul{margin:0;}
 
 /* Mi perfil*/
 .mis-datos {padding-top: 20px}
-.card-body {display:flex; justify-content: space-between }
-.card-body p{margin-bottom:0}
 .mis-datos h4{margin-top:1.45rem}
+.card-datos {display:flex; justify-content: space-between }
+.card-datos p{margin-bottom:0}
+.ellipsis{border: none;background: none}
+.card-direccion {display:flex; justify-content:space-between}
+.card-direccion p{margin-bottom: 5px;}
+.displayed{display: flex;flex-direction: column;width: fit-content; border: 1px solid #dedede; 
+z-index: 1;font-size: 0.8rem; position: absolute;right: 52px;
+box-shadow: 2px 2px 2px hsla(0, 0%, 39%, 0.2); }
+.displayed button{border: none;background: none;}
+.displayed a{color: #212529; text-align:center}
 
 /* Media Css */
 @media (max-width:991px){

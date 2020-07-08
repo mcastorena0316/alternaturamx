@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
 
 class SideBar extends React.Component {
@@ -24,9 +24,9 @@ class SideBar extends React.Component {
         isOpen: !isOpen,
       });
       if (isOpen) {
-        document.getElementsByTagName("html")[0].setAttribute('style', 'overflow:scroll;');
+        document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:scroll;');
       } else {
-        document.getElementsByTagName("html")[0].setAttribute('style', 'overflow:hidden;');
+        document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:hidden;');
       }
     }
 
@@ -61,10 +61,11 @@ class SideBar extends React.Component {
             Signin
           </Link>
 
-          <Link to="/perfil" className="menu-item">Tu cuenta
+          <Link to="/perfil" className="menu-item">
+            Mis datos
           </Link>
-          
-          <Link to="/" className="menu-item">  
+
+          <Link to="/" className="menu-item">
             Consulta un especialista
           </Link>
         </Menu>
