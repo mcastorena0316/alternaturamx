@@ -56,11 +56,11 @@ const Perfil = () => (
         />
         <Card>
           <Card.Body className="card-datos">
-            <p>
+            <Link to="/addressForm">
               <i className="fa fa-plus-circle" aria-hidden="true" />
               {' '}
               Agregar Direccion
-            </p>
+            </Link>
           </Card.Body>
         </Card>
       </div>

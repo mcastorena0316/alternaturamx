@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import StarRatingComponent from 'react-star-rating-component';
+import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -23,10 +24,11 @@ class IndexPost extends React.Component {
   }
 
   handleScroll = () => {
+    const { NoOfPost } = this.state;
     const lastScrollY = window.pageYOffset + 1100;
 
     if (lastScrollY > window.outerHeight) {
-      const count = this.state.NoOfPost + 3;
+      const count = NoOfPost + 3;
       this.setState({
         NoOfPost: count,
       });
@@ -86,6 +88,14 @@ class IndexPost extends React.Component {
     );
   }
 }
+
+IndexPost.propTypes = {
+  data: PropTypes.shape({}),
+};
+
+IndexPost.defaultProps = {
+  data: {},
+};
 
 const IndexPage = (data) => (
 
