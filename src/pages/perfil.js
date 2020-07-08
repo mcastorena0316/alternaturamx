@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Card } from 'react-bootstrap';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -25,11 +26,11 @@ const Perfil = () => (
         <CardComponent title1="Terminada en 2222" title2="Bancomer" title3="vencimiento 01/2020" />
         <Card>
           <Card.Body className="card-datos">
-            <p>
+            <Link to="/cardForm">
               <i className="fa fa-plus-circle" aria-hidden="true" />
               {' '}
               Agregar Tarjeta
-            </p>
+            </Link>
           </Card.Body>
         </Card>
 

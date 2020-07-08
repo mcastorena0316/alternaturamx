@@ -46,7 +46,7 @@ class CardComponent extends React.Component {
             )}
             {displayed && (
             <div className="displayed">
-              <Link to="/perfil">Editar</Link>
+              <Link to="/cardForm">Editar</Link>
               <button type="button">Eliminar</button>
             </div>
             )}

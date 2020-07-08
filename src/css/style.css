@@ -370,6 +370,8 @@ footer.site-footer ul{margin:0;}
 .mis-datos {padding-top: 20px}
 .mis-datos h4{margin-top:1.45rem}
 .card-datos {display:flex; justify-content: space-between }
+.card-datos a{color:initial}
+.card-datos a:hover{text-decoration: none; color:initial}
 .card-datos p{margin-bottom:0}
 .ellipsis{border: none;background: none}
 .card-direccion {display:flex; justify-content:space-between}
@@ -377,11 +379,16 @@ footer.site-footer ul{margin:0;}
 .displayed{display: flex;flex-direction: column;width: fit-content; border: 1px solid #dedede; 
 z-index: 1;font-size: 0.8rem; position: absolute;right: 52px;
 box-shadow: 2px 2px 2px hsla(0, 0%, 39%, 0.2); }
+.displayed a:hover, .displayed button:hover {background-color: rgb(228, 222, 222)}
 .displayed button{border: none;background: none;}
+.displayed button:focus{border:none}
 .displayed a{color: #212529; text-align:center}
 .btn-danger {margin-left:5px}
 .btn-danger a{color:white}
 .btn-danger a:hover{text-decoration:none}
+
+/*Card form */
+.card-form .form-row .form-group div span{font-size: 32px; color: #212529;}
 
 /* Media Css */
 @media (max-width:991px){
