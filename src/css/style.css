@@ -379,6 +379,9 @@ z-index: 1;font-size: 0.8rem; position: absolute;right: 52px;
 box-shadow: 2px 2px 2px hsla(0, 0%, 39%, 0.2); }
 .displayed button{border: none;background: none;}
 .displayed a{color: #212529; text-align:center}
+.btn-danger {margin-left:5px}
+.btn-danger a{color:white}
+.btn-danger a:hover{text-decoration:none}
 
 /* Media Css */
 @media (max-width:991px){

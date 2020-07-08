@@ -32,7 +32,7 @@ class CardComponent extends React.Component {
             {!title3 && (
             <>
               <p>{title2}</p>
-              <p>{'>'}</p>
+              <Link to="/dataForm">{'>'}</Link>
             </>
             )}
             {title3 && (

@@ -1,16 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import StarRatingComponent from 'react-star-rating-component';
-import { graphql } from "gatsby";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 class IndexPost extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      NoOfPost: 6
+      NoOfPost: 6,
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -24,25 +23,24 @@ class IndexPost extends React.Component {
   }
 
   handleScroll = () => {
-    var lastScrollY = window.pageYOffset + 1100;
+    const lastScrollY = window.pageYOffset + 1100;
 
     if (lastScrollY > window.outerHeight) {
-      var count = this.state.NoOfPost + 3;
+      const count = this.state.NoOfPost + 3;
       this.setState({
-        NoOfPost: count
+        NoOfPost: count,
       });
     }
   };
 
   render() {
-
     const { data } = this.props;
     const { NoOfPost } = this.state;
 
     return (
-      <React.Fragment>
+      <>
         <div className="row product-main" onScroll={this.onScrollEvent}>
-          {data.data.allContentfulProduct.edges.slice(0, NoOfPost).map(items => (
+          {data.data.allContentfulProduct.edges.slice(0, NoOfPost).map((items) => (
             <div className="Catalogue__item col-sm-12 col-md-6 col-lg-4" key={items.node.id}>
               <div className="details_List">
                 {items.node.image === null ? <div className="no-image">No Image</div> : <Img sizes={items.node.image.fixed} />}
@@ -59,7 +57,10 @@ class IndexPost extends React.Component {
                   <p>{items.node.details.childMarkdownRemark.excerpt}</p>
                   <div className="row">
                     <div className="col-sm-4 align-self-center">
-                      <span className="price">${items.node.price}</span>
+                      <span className="price">
+                        $
+                        {items.node.price}
+                      </span>
                     </div>
                     <div className="col-sm-8 text-right align-self-center">
                       <a
@@ -67,12 +68,13 @@ class IndexPost extends React.Component {
                         className="Product snipcart-add-item"
                         data-item-id={items.node.slug}
                         data-item-price={items.node.price}
-                        data-item-image={items.node.image === null ? "" : items.node.image.fixed.src}
+                        data-item-image={items.node.image === null ? '' : items.node.image.fixed.src}
                         data-item-name={items.node.name}
-                        data-item-url={`/`}
+                        data-item-url="/"
                       >
-                        <i className="fas fa-shopping-bag" />Add to Cart
-                    </a>
+                        <i className="fas fa-shopping-bag" />
+                        Add to Cart
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -80,22 +82,22 @@ class IndexPost extends React.Component {
             </div>
           ))}
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
 
-const IndexPage = data => (
+const IndexPage = (data) => (
 
   <Layout>
-    <SEO title="Store" keywords={[`gatsby`, `store`, `react`]} />
+    <SEO title="Store" keywords={['gatsby', 'store', 'react']} />
     <div className="container store-page">
-      <IndexPost data={data}></IndexPost>
+      <IndexPost data={data} />
     </div>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query StoreQuery {
@@ -124,4 +126,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

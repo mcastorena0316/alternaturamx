@@ -28,6 +28,7 @@
     "react-burger-menu": "^2.7.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-phone-input-2": "^2.13.7",
     "react-slick": "^0.24.0",
     "react-star-rating-component": "^1.4.1",
     "react-tabs": "^3.0.0"
