@@ -4,7 +4,7 @@ import SEO from '../components/seo';
 
 const Login = () => (
   <Layout>
-    <SEO title="Contact Us" keywords={['gatsby', 'Login', 'react']} />
+    <SEO title="Login" keywords={['gatsby', 'Login', 'react']} />
     <div className="Contact-us">
       <div className="container">
         <form action="https://formspree.io/alternatura@gmail.com" method="POST" name="contact">

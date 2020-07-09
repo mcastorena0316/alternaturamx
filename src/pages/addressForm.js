@@ -10,30 +10,33 @@ const addressForm = () => (
     <Container>
       <Form className="Contact-us card-form">
 
-        <Form.Group as={Col} controlId="formGridName">
-          <Form.Label>Name on Card</Form.Label>
-          <Form.Control type="text" placeholder="Juan Perez Ramirez" />
-        </Form.Group>
-        <Form.Group as={Col} controlId="formGridAddress">
-          <Form.Label>Billing Address</Form.Label>
-          <Form.Control type="text" placeholder="Vasconcelos 115 Col. Bosques del Valle. San Pedro Garcia Garcia" />
-        </Form.Group>
         <Form.Row>
-          <Form.Group as={Col} controlId="formGridCard">
-            <Form.Label>Credit Card</Form.Label>
-            <Form.Control type="text" placeholder="XXXX XXXX XXXX" />
+          <Form.Group as={Col} controlId="formGridStreet">
+            <Form.Label>Street Name</Form.Label>
+            <Form.Control type="text" placeholder="Constelaciones" />
           </Form.Group>
-          <Form.Group as={Col} controlId="formGridCVV">
-            <Form.Label>CVV</Form.Label>
-            <Form.Control size="4" type="text" placeholder="123" />
+          <Form.Group as={Col} controlId="formGridNumber">
+            <Form.Label>Number:</Form.Label>
+            <Form.Control size="4" type="number" placeholder="123" />
           </Form.Group>
-          <Form.Group as={Col} controlId="formGridDate">
-            <Form.Label>Expiration</Form.Label>
-            <div style={{ display: 'flex' }}>
-              <Form.Control type="text" name="month" placeholder="MM" maxlength="2" size="2" />
-              <span>/</span>
-              <Form.Control type="text" name="year" placeholder="YY" maxlength="2" size="2" />
-            </div>
+          <Form.Group as={Col} controlId="formGridNumber2">
+            <Form.Label>Inner number:</Form.Label>
+            <Form.Control type="text" placeholder="10j" />
+          </Form.Group>
+        </Form.Row>
+
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridNeighborhood">
+            <Form.Label>Neighborhood(Colonia)</Form.Label>
+            <Form.Control type="text" placeholder="Contry Sol" />
+          </Form.Group>
+          <Form.Group as={Col} controlId="formGriCityAddress">
+            <Form.Label>City</Form.Label>
+            <Form.Control type="text" placeholder="Monterrey" />
+          </Form.Group>
+          <Form.Group as={Col} controlId="formGridCP">
+            <Form.Label>CP</Form.Label>
+            <Form.Control type="number" placeholder="67170" />
           </Form.Group>
         </Form.Row>
 

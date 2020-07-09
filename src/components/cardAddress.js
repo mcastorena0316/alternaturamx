@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import { Link } from 'gatsby';
 
-
 class CardAddress extends React.Component {
   constructor(props) {
     super(props);

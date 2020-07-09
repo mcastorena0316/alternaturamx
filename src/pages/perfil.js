@@ -2,13 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Card } from 'react-bootstrap';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
 import CardComponent from '../components/cardComponent';
 import CardAddress from '../components/cardAddress';
 
 const Perfil = () => (
   <Layout>
-    <SEO title="Contact Us" keywords={['gatsby', 'Login', 'react']} />
     <div className="mis-datos">
       <div className="container">
         <div className="text-center"><h3>Mis datos</h3></div>

@@ -26,6 +26,7 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.1.1",
     "react-burger-menu": "^2.7.0",
+    "react-city-input": "^1.4.9",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-phone-input-2": "^2.13.7",
