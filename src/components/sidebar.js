@@ -18,17 +18,17 @@ class SideBar extends React.Component {
      });
    }
 
-    hideScroll= () => {
-      const { isOpen } = this.state;
-      this.setState({
-        isOpen: !isOpen,
-      });
-      if (isOpen) {
-        document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:scroll;');
-      } else {
-        document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:hidden;');
-      }
-    }
+    // hideScroll= () => {
+    //   const { isOpen } = this.state;
+    //   // this.setState({
+    //   //   isOpen: !isOpen,
+    //   // });
+    //   if (isOpen) {
+    //     document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:scroll;');
+    //   } else {
+    //     document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:hidden;');
+    //   }
+    // }
 
     render() {
       const { open } = this.state;

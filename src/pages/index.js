@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import StarRatingComponent from 'react-star-rating-component';
 import Layout from '../components/layout';
@@ -8,59 +9,71 @@ import Banner from '../components/banner';
 import LatestBlogs from '../components/latestBlog';
 import Countdown from '../components/countdown';
 
-class IndexPost extends React.Component {
-  render() {
-    const { data } = this.props;
-    return (
-      <>
-        <div className="row product-main">
-          {data.data.allContentfulProduct.edges.map((items) => (
-            <div className="Catalogue__item col-sm-12 col-md-6 col-lg-4" key={items.node.id}>
-              <div className="details_List">
-                {items.node.image === null ? <div className="no-image">No Image</div> : <Img sizes={items.node.image.fluid} />}
+const IndexPost = ({ data }) => (
+  <>
+    <div className="row product-main">
+      {data.data.allContentfulProduct.edges.map((items) => (
+        <div className="Catalogue__item col-sm-12 col-md-6 col-lg-4" key={items.node.id}>
+          <div className="details_List">
+            {items.node.image === null ? <div className="no-image">No Image</div>
+              : (
+                <Link to={`/${items.node.slug}`}>
+                  {' '}
+                  <Img sizes={items.node.image.fluid} style={{ cursor: 'pointer' }} />
+                  {' '}
+                </Link>
+              )}
 
-                <div className="details_inner">
+            <div className="details_inner">
 
-                  <h2>
-                    <Link to={`/${items.node.slug}`}>{items.node.name}</Link>
-                  </h2>
-                  <StarRatingComponent
-                    name="rate1"
-                    starCount={5}
-                    value={items.node.rating}
-                  />
-                  <p>{items.node.details.childMarkdownRemark.excerpt}</p>
-                  <div className="row">
-                    <div className="col-sm-4 align-self-center">
-                      <span className="price">
-                        $
-                        {items.node.price}
-                      </span>
-                    </div>
-                    <div className="col-sm-8 text-right align-self-center">
-                      <a
-                        href="#"
-                        className="Product snipcart-add-item"
-                        data-item-id={items.node.slug}
-                        data-item-price={items.node.price}
-                        data-item-image={items.node.image === null ? '' : items.node.image.fluid.src}
-                        data-item-name={items.node.name}
-                        data-item-url="/"
-                      >
-                        <i className="fas fa-shopping-bag" />
-                        Add to Cart
-                      </a>
-                    </div>
-                  </div>
+              <h2>
+                <Link to={`/${items.node.slug}`}>{items.node.name}</Link>
+              </h2>
+              <StarRatingComponent
+                name="rate1"
+                starCount={5}
+                value={items.node.rating}
+              />
+              <p>{items.node.details.childMarkdownRemark.excerpt}</p>
+              <div className="row">
+                <div className="col-sm-4 align-self-center">
+                  <span className="price">
+                    $
+                    {items.node.price}
+                  </span>
+                </div>
+                <div className="col-sm-8 text-right align-self-center">
+                  <a
+                    href="#"
+                    className="Product snipcart-add-item"
+                    data-item-id={items.node.slug}
+                    data-item-price={items.node.price}
+                    data-item-image={items.node.image === null ? '' : items.node.image.fluid.src}
+                    data-item-name={items.node.name}
+                    data-item-url="/"
+                  >
+                    <i className="fas fa-shopping-bag" />
+                    Add to Cart
+                  </a>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </>
-    );
-  }
-}
+      ))}
+    </div>
+  </>
+);
+
+IndexPost.propTypes = {
+  data: PropTypes.shape({
+    data: PropTypes.shape({}),
+  }),
+};
+
+IndexPost.defaultProps = {
+  data: {},
+};
 
 const IndexPage = (data) => (
   <Layout>

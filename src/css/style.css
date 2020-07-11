@@ -179,71 +179,19 @@ header nav ul.navbar-nav li a{color: #726046;}
 
 
 /* sidebar */
-#page-wrap {
-  text-align: center;
-  overflow: auto;
-  padding-bottom:50px;
-}
-
-.bm-item {
-  display: inline-block;
-  text-decoration: none;
-  color: dimgrey;
-  transition: color 0.2s;
-  padding: 8px 10px
-}
-
-.bm-item:focus,.menu-item:focus {
-  display:inline-block !important;
-}
-
-.bm-item:hover {
-  color: darkolivegreen;
-
-}
-
-.bm-burger-button {
-  position: absolute;
-  width: 36px;
-  height: 32px;
-  left: 39px;
-  top: 31px;
-}
-
-.bm-burger-bars {
-  background: #726046;
-  font-size: 22px;
-}
-
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-.bm-cross {
-  background: #bdc3c7;
-}
-
-.bm-menu {
-  background: #f8f5f5;
-  padding: 1.5em 1.5em 0;
-  font-size: 20px;
-}
-
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-.bm-item-list {
-  color: dimgrey;
-  font-size:18px;
-}
-
-#button-click {
-  background: none;
-  border: none;
-}
-
+#page-wrap {text-align: center; overflow: auto; padding-bottom:50px;}
+.bm-item {display: inline-block; text-decoration: none; color: dimgrey; transition: color 0.2s;
+padding: 8px 10px}
+.bm-item:focus,.menu-item:focus {display:inline-block !important;}
+.bm-item:hover {color: darkolivegreen;}
+.bm-burger-button {position: absolute; width: 36px; height: 32px; left: 39px; top: 31px;}
+.bm-burger-bars { background: #726046; font-size: 22px;}
+.bm-cross-button {height: 24px; width: 24px;}
+.bm-cross {background: #bdc3c7;}
+.bm-menu {background: #f8f5f5; padding: 1.5em 1.5em 0; font-size: 20px;}
+.bm-morph-shape {fill: #373a47;}
+.bm-item-list {color: dimgrey;font-size:18px;}
+#button-click {background: none; border: none;}
 #button-clik:focus {background: none;border: none !important;}
 .bm-overlay {background: rgba(0, 0, 0, 0.3);}
 
@@ -389,6 +337,9 @@ box-shadow: 2px 2px 2px hsla(0, 0%, 39%, 0.2); }
 
 /*Card form */
 .card-form .form-row .form-group div span{font-size: 32px; color: #212529;}
+
+/*Product detail */
+.product-info h2{margin-bottom:0;}
 
 /* Media Css */
 @media (max-width:991px){
