@@ -80,9 +80,9 @@ const ProductDetails = (data) => (
         <ScriptTag
           type="text/javascript"
           src="https://netlify2.services.answerbase.com/javascript/widget/full-featured-widget.js"
-          data-product-title=""
-          data-product-id=""
-          data-product-price=""
+          data-product-title={data.data.contentfulProduct.name}
+          data-product-id={data.data.contentfulProduct.slug}
+          data-product-price={data.data.contentfulProduct.price}
           data-product-url=""
           data-product-description=""
           data-product-image-url=""
