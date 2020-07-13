@@ -340,6 +340,7 @@ box-shadow: 2px 2px 2px hsla(0, 0%, 39%, 0.2); }
 
 /*Product detail */
 .product-info h2{margin-bottom:0;}
+#ab-tiny-widget{white-space: normal !important;}
 
 /* Media Css */
 @media (max-width:991px){

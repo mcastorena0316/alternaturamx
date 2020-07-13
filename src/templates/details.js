@@ -36,20 +36,25 @@ const ProductDetails = (data) => (
         </div>
         <div className="product-info col-lg-6">
           <h2>{data.data.contentfulProduct.name}</h2>
-
+          <p>
+            <ScriptTag src="https://netlify2.services.answerbase.com/javascript/widget/cta-widget.js" data-text="Feel free to ask a question" />
+          </p>
           <StarRatingComponent
             name="rate1"
             starCount={5}
             value={data.data.contentfulProduct.rating}
           />
           <div className="row buynowinner">
-            <div className="col-lg-6 col-sm-2">
+            <div className="col-lg-6 col-md-6 col-sm-2">
               <span className="price">
                 Price: $
                 {data.data.contentfulProduct.price}
               </span>
+              <p>
+                {`por ${data.data.contentfulProduct.author.name}`}
+              </p>
             </div>
-            <div className="col-lg-6 col-sm-10 text-left">
+            <div className="col-lg-6 col-md-6 col-sm-10 text-left">
               <a
                 href="#"
                 className="Product snipcart-add-item"
@@ -81,7 +86,7 @@ const ProductDetails = (data) => (
           type="text/javascript"
           src="https://netlify2.services.answerbase.com/javascript/widget/full-featured-widget.js"
           data-product-title={data.data.contentfulProduct.name}
-          data-product-id={data.data.contentfulProduct.slug}
+          data-product-id={data.data.contentfulProduct.id}
           data-product-price={data.data.contentfulProduct.price}
           data-product-url=""
           data-product-description=""
@@ -105,7 +110,7 @@ const ProductDetails = (data) => (
           data-view-all="false"
           data-page-specific-content="false"
           data-show-question-list="true"
-          data-show-product="false"
+          data-show-product="true"
           data-show-category="true"
           data-page-association="false"
           data-automatic-updates="true"
@@ -124,6 +129,9 @@ export const query = graphql`
       id
       name
       slug
+      author {
+        name
+      }
       image {
         fixed(width: 1120, height: 500) {
         width
@@ -132,6 +140,7 @@ export const query = graphql`
         srcSet
       }
     }
+   
     price
       details {
       childMarkdownRemark {
