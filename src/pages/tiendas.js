@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
@@ -65,8 +66,6 @@ class Tiendas extends React.Component {
 Tiendas.propTypes = {
   data: PropTypes.shape({
     allContentfulAuthor: PropTypes.shape({
-      // eslint-disable-next-line react/forbid-prop-types
-      edges: PropTypes.array(),
     }),
   }),
 };
