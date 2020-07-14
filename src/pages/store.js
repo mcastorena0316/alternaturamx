@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -90,7 +91,13 @@ class IndexPost extends React.Component {
 }
 
 IndexPost.propTypes = {
-  data: PropTypes.shape({}),
+  data: PropTypes.shape({
+    data: PropTypes.shape({
+      allContentfulProduct: PropTypes.shape({
+        edges: PropTypes.shape({}),
+      }),
+    }),
+  }),
 };
 
 IndexPost.defaultProps = {

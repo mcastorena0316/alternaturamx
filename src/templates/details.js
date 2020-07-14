@@ -36,9 +36,7 @@ const ProductDetails = (data) => (
         </div>
         <div className="product-info col-lg-6">
           <h2>{data.data.contentfulProduct.name}</h2>
-          <p>
-            <ScriptTag src="https://netlify2.services.answerbase.com/javascript/widget/cta-widget.js" data-text="Feel free to ask a question" />
-          </p>
+
           <StarRatingComponent
             name="rate1"
             starCount={5}
