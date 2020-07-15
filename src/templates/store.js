@@ -43,35 +43,36 @@ class IndexPost extends React.Component {
     return (
       <>
         <div className="row product-main" onScroll={this.onScrollEvent}>
-          {data.data.allContentfulProduct.edges.slice(0, NoOfPost).map((items) => (
-            <div className="Catalogue__item col-sm-12 col-md-6 col-lg-4" key={items.node.id}>
+          { data.data.contentfulAuthor.product !== null && data.data.contentfulAuthor.product.map((items) => (
+            <div className="Catalogue__item col-sm-12 col-md-6 col-lg-4" key={items.id}>
               <div className="details_List">
-                {items.node.image === null ? <div className="no-image">No Image</div> : <Img sizes={items.node.image.fixed} />}
+                {items.image === null ? <div className="no-image">No Image</div> : <Img sizes={items.image.fixed} />}
 
                 <div className="details_inner">
                   <h2>
-                    <Link to={`/${items.node.slug}`}>{items.node.name}</Link>
+                    {/* <Link to={`/${items.node.slug}`}>{items.name}</Link> */}
+                    {items.name}
                   </h2>
                   <StarRatingComponent
                     name="rate1"
                     starCount={5}
-                    value={items.node.rating}
+                    value={items.rating}
                   />
                   <div className="row">
                     <div className="col-sm-4 align-self-center">
                       <span className="price">
                         $
-                        {items.node.price}
+                        {items.price}
                       </span>
                     </div>
                     <div className="col-sm-8 text-right align-self-center">
                       <a
                         href="#"
                         className="Product snipcart-add-item"
-                        data-item-id={items.node.slug}
-                        data-item-price={items.node.price}
-                        data-item-image={items.node.image === null ? '' : items.node.image.fixed.src}
-                        data-item-name={items.node.name}
+                        // data-item-id={items.slug}
+                        data-item-price={items.price}
+                        data-item-image={items.image === null ? '' : items.image.fixed.src}
+                        data-item-name={items.name}
                         data-item-url="/"
                       >
                         <i className="fas fa-shopping-bag" />
@@ -83,6 +84,7 @@ class IndexPost extends React.Component {
               </div>
             </div>
           ))}
+          { data.data.contentfulAuthor.product == null && <p>No products</p>}
         </div>
       </>
     );
@@ -115,25 +117,23 @@ const IndexPage = (data) => (
 export default IndexPage;
 
 export const query = graphql`
-  query StoreQuery {
-    allContentfulProduct{
-      edges{
-        node{
-          id
-          name
-          slug
-          rating
-          image {
-            fixed(width: 1000, height: 500) {
-              width
-              height
-              src
-              srcSet
-            }
-          }
-          price
+query MyQuery($slug: String) {
+  contentfulAuthor(slug: {eq: $slug}) {
+    product {
+      name
+      price
+      rating
+      id
+      image {
+        fixed(width: 1120, height: 500) {
+          height
+          width
+          src
+          srcSet
         }
       }
     }
+
   }
+}
 `;

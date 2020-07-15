@@ -49,8 +49,7 @@ class Tiendas extends React.Component {
 
                     <div className="details_inner">
                       <h2>
-                        {items.node.name}
-                        {/* <Link to={`/${items.node.slug}`}>{items.node.name}</Link> */}
+                        <Link to={`/${items.node.slug}`}>{items.node.name}</Link>
                       </h2>
                     </div>
                   </div>
@@ -83,6 +82,7 @@ query AuthorsQuery {
         node {
           id
           name
+          slug
           photo {
             fixed(width: 1000) { 
               width
