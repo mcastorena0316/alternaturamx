@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link, graphql } from 'gatsby';
@@ -38,7 +39,6 @@ class IndexPost extends React.Component {
 
   render() {
     const { data } = this.props;
-    const { NoOfPost } = this.state;
 
     return (
       <>
@@ -50,8 +50,7 @@ class IndexPost extends React.Component {
 
                 <div className="details_inner">
                   <h2>
-                    {/* <Link to={`/${items.node.slug}`}>{items.name}</Link> */}
-                    {items.name}
+                    <Link to={`/${items.slug}`}>{items.name}</Link>
                   </h2>
                   <StarRatingComponent
                     name="rate1"
@@ -69,7 +68,7 @@ class IndexPost extends React.Component {
                       <a
                         href="#"
                         className="Product snipcart-add-item"
-                        // data-item-id={items.slug}
+                        data-item-id={items.slug}
                         data-item-price={items.price}
                         data-item-image={items.image === null ? '' : items.image.fixed.src}
                         data-item-name={items.name}
@@ -124,6 +123,7 @@ query MyQuery($slug: String) {
       price
       rating
       id
+      slug
       image {
         fixed(width: 1120, height: 500) {
           height
