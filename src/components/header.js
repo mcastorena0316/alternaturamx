@@ -7,7 +7,7 @@ import '../css/style.css';
 import SEO from './seo';
 import logo from '../images/Alternatura.png';
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className="site-header">
     <SEO />
     <div className="container">
@@ -61,13 +61,5 @@ const Header = ({ siteTitle }) => (
 
   </header>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: '',
-};
 
 export default Header;

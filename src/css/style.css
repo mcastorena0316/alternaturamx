@@ -184,7 +184,7 @@ header nav ul.navbar-nav li a{color: #726046;}
 padding: 8px 10px}
 .bm-item:focus,.menu-item:focus {display:inline-block !important;}
 .bm-item:hover {color: darkolivegreen;}
-.bm-burger-button {position: absolute; width: 36px; height: 32px; left: 39px; top: 31px;}
+.bm-burger-button {position: absolute; width: 36px; height: 32px; left: 39px; top: 31px;z-index:auto!important}
 .bm-burger-bars { background: #726046; font-size: 22px;}
 .bm-cross-button {height: 24px; width: 24px;}
 .bm-cross {background: #bdc3c7;}
