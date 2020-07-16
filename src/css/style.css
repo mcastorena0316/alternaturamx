@@ -393,7 +393,7 @@ box-shadow: 2px 2px 2px hsla(0, 0%, 39%, 0.2); }
 }
 
 @media(max-width:480px) {
-  .bm-burger-button{ top: 4.9vh}
+  .bm-burger-button{ top: 22.5px}
 }
 
 /* Media Css */
