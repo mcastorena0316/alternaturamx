@@ -33,7 +33,7 @@ class SideBar extends React.Component {
    render() {
      const { open } = this.state;
      return (
-       <Menu onStateChange={this.hideScroll} burgerButtonClassName={ "my-class" }>
+       <Menu onStateChange={this.hideScroll} width="250px">
          <div className="container" id="bm-item">
            <span className="menu-item">Categorias</span>
            <button type="button" onClick={this.handleButtonClick} id="button-click"><i className="fa fa-caret-down" aria-hidden="true" /></button>
