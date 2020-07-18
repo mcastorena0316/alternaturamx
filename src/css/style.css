@@ -363,7 +363,7 @@ box-shadow: 2px 2px 2px hsla(0, 0%, 39%, 0.2); }
   ul.latest-blog{display:block;}
   header nav{display:inline-block;width:100%;}
   ul.navbar-nav.mr-auto li{display:inline-block;margin:0 5px 0 0;}
-  .navbar-nav .nav-link{font-size:14px;}
+  .navbar-nav .nav-link{font-size:16px;}
   .header-cart{position:absolute;top:-93px;right:0;}
   .search{width:100%}
   .bm-burger-button{width: 36px;height: 27px;right: 23.5vw;top: 5.5vh; left:auto}

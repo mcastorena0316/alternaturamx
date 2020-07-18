@@ -18,17 +18,17 @@ class SideBar extends React.Component {
      });
    }
 
-   // hideScroll= () => {
-   //   const { isOpen } = this.state;
-   //   // this.setState({
-   //   //   isOpen: !isOpen,
-   //   // });
-   //   if (isOpen) {
-   //     document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:scroll;');
-   //   } else {
-   //     document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:hidden;');
-   //   }
-   // }
+   hideScroll= () => {
+     const { isOpen } = this.state;
+     this.setState({
+       isOpen: !isOpen,
+     });
+     if (isOpen) {
+       document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:scroll;');
+     } else {
+       document.getElementsByTagName('html')[0].setAttribute('style', 'overflow:hidden;');
+     }
+   }
 
    render() {
      const { open } = this.state;
@@ -49,23 +49,23 @@ class SideBar extends React.Component {
            )}
          </div>
 
-         <Link to="/" className="menu-item">
+         <Link to="/" className="menu-item" onClick={this.hideScroll}>
            Tus pedidos
          </Link>
 
-         <Link to="/login" className="menu-item">
+         <Link to="/login" className="menu-item" onClick={this.hideScroll}>
            Login
          </Link>
 
-         <Link to="/signin" className="menu-item">
+         <Link to="/signin" className="menu-item" onClick={this.hideScroll}>
            Signin
          </Link>
 
-         <Link to="/perfil" className="menu-item">
+         <Link to="/perfil" className="menu-item" onClick={this.hideScroll}>
            Mis datos
          </Link>
 
-         <Link to="/tiendas" className="menu-item">
+         <Link to="/tiendas" className="menu-item" onClick={this.hideScroll}>
            Tiendas
          </Link>
        </Menu>
