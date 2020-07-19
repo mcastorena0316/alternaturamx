@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Roboto:wght@100;400&display=swap');
 
 html{font-family:'Josefin Sans',sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -82,7 +83,7 @@ html{font:112.5%/1.45em georgia,serif;box-sizing:border-box;overflow-y:scroll}
 *{box-sizing:inherit}
 *:before{box-sizing:inherit}
 *:after{box-sizing:inherit}
-body{color:hsla(0,0%,0%,0.8);font-family:georgia,serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern","liga","clig","calt";-ms-font-feature-settings:"kern","liga","clig","calt";-webkit-font-feature-settings:"kern","liga","clig","calt";font-feature-settings:"kern","liga","clig","calt"}
+body{color:hsla(0,0%,0%,0.8);font-family: 'Roboto', sans-serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern","liga","clig","calt";-ms-font-feature-settings:"kern","liga","clig","calt";-webkit-font-feature-settings:"kern","liga","clig","calt";font-feature-settings:"kern","liga","clig","calt"}
 img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem}
 h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-weight:bold;text-rendering:optimizeLegibility;font-size:2.25rem;line-height:1.1}
 h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.62671rem;line-height:1.1}
@@ -145,10 +146,11 @@ pre tt:before,
 pre tt:after{content:""}
 @media only screen and (max-width:480px){
   html{font-size:100%}
+  .bm-burger-bars{height:18% !important}
 }
 
 
-*{font-family:'Josefin Sans',sans-serif;}
+*{font-family: 'Didact Gothic', sans-serif;}
 .product-main .details_List .gatsby-image-wrapper{height:200px;}
 .img{outline:none;}
 .product-main .details_List{margin:0 0 30px 0;-webkit-box-shadow:0 5px 10px -3px rgba(0,0,0,0.25);box-shadow:0 5px 10px -3px rgba(0,0,0,0.25);-webkit-transition:-webkit-box-shadow 0.2s;-o-transition:box-shadow 0.2s;transition:box-shadow 0.2s,-webkit-box-shadow 0.2s;border:1px solid #cccccc73;}
@@ -173,9 +175,12 @@ header nav ul.navbar-nav{flex-direction:row;margin:0;width:90%;justify-content:f
 header nav ul.navbar-nav li{margin:0 10px;}
 header nav ul.navbar-nav li a{color: #726046;}
 .search {display:flex;width: 33%;}
-.search-bar { width: 100%; border: 3px solid #726046; border-right: none; padding: 5px; border-radius: 5px 0 0 5px; outline: none;color:  #726046; background-color: #efede6;}
+.search-bar { width: 100%; border: 1.5px solid #726046; border-right: none;
+padding: 5px; border-radius: 5px 0 0 5px; outline: none;color:  #726046; 
+background-color: #efede6;}
 .search-bar:focus { color: #726046;}
-.searchButton {width: 40px;border: 1px solid  #726046;background:  #726046;text-align: center;color: #fff;border-radius: 0 5px 5px 0;cursor: pointer;font-size: 20px;}
+.searchButton {width: 40px;border: 1px solid  #726046;background:  #726046;
+text-align: center;color: #fff;border-radius: 0 5px 5px 0;cursor: pointer;font-size: 20px;}
 
 
 /* sidebar */
@@ -184,8 +189,8 @@ header nav ul.navbar-nav li a{color: #726046;}
 padding: 8px 10px}
 .bm-item:focus,.menu-item:focus {display:inline-block !important;}
 .bm-item:hover {color: darkolivegreen;}
-.bm-burger-button {position: absolute; width: 36px; height: 32px; left: 39px; top: 31px;z-index:auto!important}
-.bm-burger-bars { background: #726046; font-size: 22px;}
+.bm-burger-button {position: absolute; width: 36px; height: 28px; left: 39px; top: 34px;z-index: auto!important;}
+.bm-burger-bars { background: #726046; font-size: 22px; height:17% !important}
 .bm-cross-button {height: 24px; width: 24px;}
 .bm-cross {background: #bdc3c7;}
 .bm-menu {background: #f8f5f5; padding: 1.5em 1.5em 0; font-size: 20px;}
@@ -366,7 +371,7 @@ box-shadow: 2px 2px 2px hsla(0, 0%, 39%, 0.2); }
   .navbar-nav .nav-link{font-size:16px;}
   .header-cart{position:absolute;top:-93px;right:0;}
   .search{width:100%}
-  .bm-burger-button{width: 36px;height: 27px;right: 23.5vw;top: 5.5vh; left:auto}
+  .bm-burger-button{width: 36px;height: 24px;right: 23.5vw;top: 5.5vh; left:auto}
   header.site-header{padding:15px 0;}
   a.header-logo{margin-bottom:5px;display:block;}
   .site-footer .footer_inner{padding:20px 0;}

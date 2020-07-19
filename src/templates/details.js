@@ -43,7 +43,7 @@ const ProductDetails = (data) => (
             value={data.data.contentfulProduct.rating}
           />
           <div className="row buynowinner">
-            <div className="col-lg-6 col-md-6 col-sm-2">
+            <div className="col-lg-6 col-md-6 col-sm-6">
               <span className="price">
                 Price: $
                 {data.data.contentfulProduct.price}
@@ -52,7 +52,7 @@ const ProductDetails = (data) => (
                 {`por ${data.data.contentfulProduct.author.name}`}
               </p>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-10 text-left">
+            <div className="col-lg-6 col-md-6 col-sm-6 text-left">
               <a
                 href="#"
                 className="Product snipcart-add-item"
