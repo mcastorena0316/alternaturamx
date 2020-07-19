@@ -57,6 +57,17 @@ class IndexPost extends React.Component {
                     starCount={5}
                     value={items.node.rating}
                   />
+                  <div>
+                    <span>
+                      por
+                    </span>
+
+                    <Link to={`/${items.node.author.slug}`} className="bm-item">
+                      {' '}
+                      {items.node.author.name}
+                    </Link>
+                  </div>
+
                   <div className="row">
                     <div className="col-sm-4 align-self-center">
                       <span className="price">
@@ -121,6 +132,10 @@ export const query = graphql`
         node{
           id
           name
+          author {
+            name
+            slug
+          }
           slug
           rating
           image {

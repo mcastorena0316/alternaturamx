@@ -39,11 +39,19 @@ class SideBar extends React.Component {
            <button type="button" onClick={this.handleButtonClick} id="button-click"><i className="fa fa-caret-down" aria-hidden="true" /></button>
            {open && (
            <div className="dropdown">
-             <ul>
-               <li>Option 1</li>
-               <li>Option 2</li>
-               <li>Option 3</li>
-               <li>Option 4</li>
+             <ul className="sidebar-list">
+               <Link to="/" className="bm-item menu-item" onClick={this.hideScroll}>
+                 <li>Option 1</li>
+               </Link>
+               <Link to="/" className="bm-item menu-item" onClick={this.hideScroll}>
+                 <li>Option 2</li>
+               </Link>
+               <Link to="/" className="bm-item menu-item" onClick={this.hideScroll}>
+                 <li>Option 3</li>
+               </Link>
+               <Link to="/" className="bm-item menu-item" onClick={this.hideScroll}>
+                 <li>Option 4</li>
+               </Link>
              </ul>
            </div>
            )}
