@@ -16,18 +16,28 @@ import Footer from './footer';
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+    query myQuery4AndSiteTitleQuery {
         site {
           siteMetadata {
             title
           }
         }
+
+      allContentfulCategory {
+        edges {
+          node {
+            name
+            id
+            slug
+          }
+        }
       }
+    }
     `}
     render={(data) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Sidebar />
+        <Sidebar data={data} />
         <div>
           <main>{children}</main>
         </div>

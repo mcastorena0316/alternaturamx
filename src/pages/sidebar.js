@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
+import SEO from '../components/seo';
 
 class SideBar extends React.Component {
   constructor(props) {
@@ -32,28 +33,21 @@ class SideBar extends React.Component {
 
    render() {
      const { data } = this.props;
-     console.log(data);
      const { open } = this.state;
      return (
        <Menu onStateChange={this.hideScroll} width="250px">
+         <SEO title="menu" keywords={['gatsby', 'menu', 'react']} />
          <div className="container" id="bm-item">
            <span className="menu-item">Categorias</span>
            <button type="button" onClick={this.handleButtonClick} id="button-click"><i className="fa fa-caret-down" aria-hidden="true" /></button>
            {open && (
            <div className="dropdown">
              <ul className="sidebar-list">
-               <Link to="/" className="bm-item menu-item" onClick={this.hideScroll}>
-                 <li>Option 1</li>
-               </Link>
-               <Link to="/" className="bm-item menu-item" onClick={this.hideScroll}>
-                 <li>Option 2</li>
-               </Link>
-               <Link to="/" className="bm-item menu-item" onClick={this.hideScroll}>
-                 <li>Option 3</li>
-               </Link>
-               <Link to="/" className="bm-item menu-item" onClick={this.hideScroll}>
-                 <li>Option 4</li>
-               </Link>
+               {data.allContentfulCategory.edges.map((ele) => (
+                 <Link to="/store" key={ele.node.id} state={{ ele }} className="bm-item menu-item" onClick={this.hideScroll}>
+                   <li>{ele.node.name}</li>
+                 </Link>
+               ))}
              </ul>
            </div>
            )}
@@ -84,17 +78,3 @@ class SideBar extends React.Component {
 }
 
 export default SideBar;
-
-export const query = graphql`
-query MyQuery4 {
-  allContentfulCategory {
-    edges {
-      node {
-        name
-        id
-        slug
-      }
-    }
-  }
-}
-`;
