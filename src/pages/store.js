@@ -39,11 +39,21 @@ class IndexPost extends React.Component {
   render() {
     const { data } = this.props;
     const { NoOfPost } = this.state;
+    let filterCategory = [];
+
+    if (data.location.state) {
+      filterCategory = data.data.allContentfulProduct.edges.filter((x) => (
+
+        x.node.category.name === data.location.state.ele.node.name));
+    } else {
+      filterCategory = data.data.allContentfulProduct.edges;
+    }
+
 
     return (
       <>
         <div className="row product-main" onScroll={this.onScrollEvent}>
-          {data.data.allContentfulProduct.edges.slice(0, NoOfPost).map((items) => (
+          {filterCategory.map((items) => (
             <div className="Catalogue__item col-sm-12 col-md-6 col-lg-4" key={items.node.id}>
               <div className="details_List">
                 {items.node.image === null ? <div className="no-image">No Image</div> : <Img sizes={items.node.image.fixed} />}
@@ -132,6 +142,9 @@ export const query = graphql`
         node{
           id
           name
+          category {
+            name
+          }
           author {
             name
             slug
