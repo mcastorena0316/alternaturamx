@@ -1,15 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { graphql } from "gatsby";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 class BlogsPost extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      NoOfPost: 6
+      NoOfPost: 6,
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -23,31 +22,30 @@ class BlogsPost extends React.Component {
   }
 
   handleScroll = () => {
-    var lastScrollY = window.pageYOffset + 1100;
+    const lastScrollY = window.pageYOffset + 1100;
 
     if (lastScrollY > window.outerHeight) {
-      var count = this.state.NoOfPost + 3;
+      const count = this.state.NoOfPost + 3;
       this.setState({
-        NoOfPost: count
+        NoOfPost: count,
       });
     }
   };
 
   render() {
-
     const { data } = this.props;
     const { NoOfPost } = this.state;
 
     return (
-      <React.Fragment>
+      <>
         <ul className="blog-list" onScroll={this.onScrollEvent}>
-          {data.data.allContentfulBlogs.edges.slice(0, NoOfPost).map(items => (
+          {data.data.allContentfulBlogs.edges.slice(0, NoOfPost).map((items) => (
             <li>
               <div className="post-item template-square columned">
                 <div className="post-thumbnail">
                   <Img sizes={items.node.featureImage.fluid} />
                   <div className="post-date">
-                    <i className="fas fa-calendar-alt"></i>
+                    <i className="fas fa-calendar-alt" />
                     {items.node.publicData}
                   </div>
                 </div>
@@ -64,22 +62,22 @@ class BlogsPost extends React.Component {
             </li>
           ))}
         </ul>
-      </React.Fragment>
+      </>
     );
   }
 }
 
-const Blogs = data => (
+const Blogs = (data) => (
 
   <Layout>
-    <SEO title="Blogs" keywords={[`gatsby`, `blogs`, `react`]} />
+    <SEO title="Blogs" keywords={['gatsby', 'blogs', 'react']} />
     <div className="container blog-page">
-      <BlogsPost data={data}></BlogsPost>
+      <BlogsPost data={data} />
     </div>
   </Layout>
-)
+);
 
-export default Blogs
+export default Blogs;
 
 export const query = graphql`
   query BlogsQuery {
@@ -124,7 +122,4 @@ export const query = graphql`
         }
       }
   }
-`
-
-
-
+`;

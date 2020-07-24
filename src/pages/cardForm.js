@@ -9,7 +9,6 @@ const cardForm = () => (
   <Layout>
     <Container>
       <Form className="Contact-us card-form">
-
         <Form.Group as={Col} controlId="formGridName">
           <Form.Label>Name on Card</Form.Label>
           <Form.Control type="text" placeholder="Juan Perez Ramirez" />

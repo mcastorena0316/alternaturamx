@@ -6,7 +6,6 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
 
 class dataForm extends React.Component {
   constructor(props) {
@@ -20,7 +19,6 @@ class dataForm extends React.Component {
     const { phone } = this.state;
     return (
       <Layout>
-        <SEO title="Data Form" keywords={['dataForm', 'react']} />
         <Container>
           <Form className="Contact-us">
             <Form.Row>

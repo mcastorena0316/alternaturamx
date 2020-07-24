@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
 
 class SideBar extends React.Component {
@@ -31,6 +31,8 @@ class SideBar extends React.Component {
    }
 
    render() {
+     const { data } = this.props;
+     console.log(data);
      const { open } = this.state;
      return (
        <Menu onStateChange={this.hideScroll} width="250px">
@@ -82,3 +84,17 @@ class SideBar extends React.Component {
 }
 
 export default SideBar;
+
+export const query = graphql`
+query MyQuery4 {
+  allContentfulCategory {
+    edges {
+      node {
+        name
+        id
+        slug
+      }
+    }
+  }
+}
+`;

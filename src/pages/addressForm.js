@@ -9,7 +9,6 @@ const addressForm = () => (
   <Layout>
     <Container>
       <Form className="Contact-us card-form">
-
         <Form.Row>
           <Form.Group as={Col} controlId="formGridStreet">
             <Form.Label>Street Name</Form.Label>

@@ -57,7 +57,7 @@ class IndexPost extends React.Component {
                     starCount={5}
                     value={items.node.rating}
                   />
-                  <div>
+                  <p className="author-link">
                     <span>
                       por
                     </span>
@@ -66,7 +66,7 @@ class IndexPost extends React.Component {
                       {' '}
                       {items.node.author.name}
                     </Link>
-                  </div>
+                  </p>
 
                   <div className="row">
                     <div className="col-sm-4 align-self-center">
@@ -126,7 +126,7 @@ const IndexPage = (data) => (
 export default IndexPage;
 
 export const query = graphql`
-  query StoreQuery {
+  query MyQuery7 {
     allContentfulProduct{
       edges{
         node{
@@ -152,3 +152,5 @@ export const query = graphql`
     }
   }
 `;
+
+console.log(query)

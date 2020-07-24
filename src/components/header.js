@@ -4,12 +4,10 @@ import React from 'react';
 import '../css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/style.css';
-import SEO from './seo';
 import logo from '../images/Alternatura.png';
 
 const Header = () => (
   <header className="site-header">
-    <SEO />
     <div className="container">
       <div className="row">
         <div className="col-sm-12 col-md-6 col-lg-3  align-self-center">
